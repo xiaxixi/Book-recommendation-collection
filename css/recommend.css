@@ -1,0 +1,149 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Wang Yinkai (15057638632@163.com)
+ * @date    2018-05-20 18:25:38
+ * @version $Id$
+ */
+
+/*...头.....................................................*/
+.border {
+  border: 1px solid #000;
+}
+
+.head-row {
+  width: 100%;
+  height: 60px;
+  background-color: #eee;
+}
+
+.head-row .container {
+  min-width: 1000px;
+}
+
+.head-row .container .head {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #ccc;
+}
+
+.head-row .container .head .head-box {
+  margin-top: 15px;
+  height: 30px;
+  padding: 0;
+}
+
+.head-row .container .head .head-box > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background: #5a9ad7;
+}
+
+.head-row .container .head .head-box .head-box-style {
+  display: block;
+  background: #5a9ad7;
+  width: 80%;
+  margin-left: 10%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/*...............................................................*/
+.page {
+  min-width: 1000px;
+  height: 1000px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.page .main {
+  height: 940px;
+  padding: 0;
+  margin: 0;
+}
+
+.head-box-searchbtn {
+  border: 0;
+}
+
+.page .main .main-left {
+  height: 800px;
+  padding: 0;
+  margin-left: 25px;
+}
+
+.page .main .main-left-cover {
+  margin-top: 25px;
+  height: 300px;
+  width: 200px;
+  background-image: url("../img/icons.png");
+}
+
+.page .main .main-left-info {
+    margin-top: 50px;
+    height: 300px;
+}
+
+.page .main .main-left-info > div {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.page .main .main-left-info > span {
+    margin-bottom: 20px;
+    height: 40px;
+    font-size: 18px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.page .main .main-left-button > button {
+    position: relative;
+    left: 8px;
+    top: 293px;
+
+    width: 100px;
+    height: 36px;
+    background: #5a9ad7;
+    color: #fff;
+    line-height: 36px;
+    text-align: center;
+    border: 0;
+}
+
+.page .main .main-left-button > div > input {
+  width: 200px;
+  height: 36px;
+}
+
+.page .main .main-left-introduce {
+  margin-top: 20px;
+  height: 500px;
+  border: 1px solid #ccc;
+}
+
+.page .main .main-right > ul {
+    position: relative;
+    top: 50px;
+    list-style-type: none;
+}
+
+.page .main .main-right > ul > li .second {
+    position: relative;
+    top: 0;
+    left: 100px;
+
+    width: 80px;
+    height: 40px;
+    padding: 10px;
+    float: left;
+    background: #5a9ad7;
+    display: none;
+    color: #fff;
+    text-align: center;
+}
