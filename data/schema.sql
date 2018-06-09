@@ -25,13 +25,13 @@ INSERT INTO `userTable` VALUES (2, 'def', '456','computer');
 DROP TABLE IF EXISTS `bookTable`;
 CREATE TABLE `bookTable`  (
   `book_id` int(50) NOT NULL AUTO_INCREMENT COMMENT '书籍编号',
-  `title` varchar(100) varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '书籍名称',
-  `author` varchar(100) varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '书籍作者',
-  `cover_addr` varchar(255) varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '书籍图片存放地址',
+  `title` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '书籍名称',
+  `author` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '书籍作者',
+  `cover_addr` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '书籍图片存放地址',
   `type` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '书籍类型',
-  `star_level` int(50) NOT NULL AUTO_INCREMENT COMMENT '推荐星级',
-  `intro` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '书籍简介',
-  `collect_num` int(50) NOT NULL AUTO_INCREMENT COMMENT '标记是否收藏',
+  `star_level` int(5) NOT NULL COMMENT '推荐星级',
+  `intro` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '书籍简介',
+  `collect_num` int(50) NOT NULL COMMENT '标记是否收藏',
   PRIMARY KEY (`book_id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 33 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
@@ -45,10 +45,10 @@ INSERT INTO `bookTable` VALUES (1, 'HTml5与css3基础教程', 'Elizabeth Castro
 -- ------------------------------------
 DROP TABLE IF EXISTS `userCollectTable`;
 CREATE TABLE `userCollectTable`  (
-  `user_id` int(1) NOT NULL COMMENT '用户编号',
-  `book_id` int(1) NOT NULL COMMENT '图书编号',
-  `read_state` int(1) NOT NULL COMMENT '标记是否已读',
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+  `user_id` int(15) NOT NULL COMMENT '用户编号',
+  `book_id` int(50) NOT NULL COMMENT '图书编号',
+  `read_state` int(1) NOT NULL COMMENT '标记是否已读'
+) ;
 
 -- ---------------------------
 -- Records of userCollectTable
