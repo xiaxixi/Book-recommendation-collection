@@ -76,8 +76,8 @@
 >    每本书籍都有一个下拉选择菜单，若没读完，“未读”（默认）；
 >    若读完书籍，用户可选择“已读”。</br>
 >    相关鼠标响应事件函数，“未读”（默认）时，userCollectTable的read_state为0；
->    鼠标选择“已读”，修改userCollectTable的read_state。</br>
->    6.书友圈功能</br>
+>    鼠标选择“已读”，修改userCollectTable的read_state。
+>    6. 书友圈功能</br>
 >    提供书友互聊的空间，增强图书推荐收藏的趣味。
 
 
