@@ -16,7 +16,8 @@
 界面设计
 
 1. 登陆注册界面</br>
-![](img/login-screen.png)
+![](img/login.png)
+![](img/register.png)
 2. 推荐界面</br>
 ![](http://106.15.186.59/image/intro.jpg)
 3. 个人收藏界面</br>
