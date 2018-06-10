@@ -21,9 +21,9 @@
 ![](http://106.15.186.59/image/intro.jpg)
 3. 个人收藏界面</br>
 ![](image/collect.png)
-4.搜索界面</br>
+4. 搜索界面</br>
 ![](img/search.png)
-5.书友圈界面</br>
+5. 书友圈界面</br>
 ![](img/book-club.png)
 
 
