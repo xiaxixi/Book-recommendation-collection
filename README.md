@@ -16,16 +16,20 @@
 界面设计
 
 1. 登陆注册界面</br>
-![](img/login.png)
-![](img/register.png)
+![](img/login.jpg)
+![](img/register.jpg)
+
 2. 推荐界面</br>
 ![](http://106.15.186.59/image/intro.jpg)
+
 3. 个人收藏界面</br>
 ![](img/collect.png)
+
 4. 搜索界面</br>
 ![](img/search.png)
+
 5. 书友圈界面</br>
-![](img/book-club.png)
+![](img/circle.jpg)
 
 
 数据结构
