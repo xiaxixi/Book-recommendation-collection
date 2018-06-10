@@ -43,7 +43,7 @@ function fn(data) {
                         <div class='search-infor col-md-5 col-xs-5'>\
                             <p>书名：" +data.books[i].title +"</p>\
                             <p>作者：" +Author + "</p>\
-                            <p>评分："+ data.books[i].rating.average +"</p>\
+                            <p>豆瓣评分："+ data.books[i].rating.average +"</p>\
                             <p>出版社：" + data.books[i].publisher +"</p>\
                         </div>\
                         <div class='collect-button col-md-4 col-xs-4' id='collect-btn'>\
@@ -71,7 +71,7 @@ function fn(data) {
     oTip.innerHTML = html;
     var aLi = oTip.getElementsByTagName("li");
 
-    //给点样式              data.star就是每页开始的数据，如：第一页默认0，第二页为20，。。。
+    //给点样式              data.star就是每页开始的数据，如：第一页默认0，第二页为4，。。。
     aLi[data.start / 4].className = "active";
 
     for (var i = 0; i < aLi.length; i++) {
