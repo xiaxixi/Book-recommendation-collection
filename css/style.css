@@ -11,62 +11,6 @@ li {
     cursor: pointer;
 }
 
-.page {
-    min-width: 1000px;
-    height: 700px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-}
-
-.border {
-    border: 1px solid #000;
-}
-
-.head-row {
-    width: 100%;
-    height: 60px;
-    background-color: #eee;
-}
-
-.head-row .container {
-    min-width: 1000px;
-}
-
-.head-row .container .head {
-    width: 100%;
-    height: 60px;
-    border-bottom: 1px solid #ccc;
-}
-
-.head-row .container .head .head-box {
-    margin-top: 15px;
-    height: 30px;
-    padding: 0;
-}
-
-.head-row .container .head .head-box>div {
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-    background: #5a9ad7;
-}
-
-.head-row .container .head .head-box>button {
-    border: 0;
-}
-
-.head-row .container .head .head-box .head-box-style {
-    display: block;
-    background: #5a9ad7;
-    width: 80%;
-    margin-left: 10%;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    color: #fff;
-    border-radius: 4px;
-}
-
 /*.........collect.......*/
 
 .collect {
