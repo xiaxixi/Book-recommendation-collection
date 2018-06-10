@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /**
  * 
  * @authors Wang Yinkai (15057638632@163.com)
@@ -6,12 +7,69 @@
  * @version $Id$
  */
 
-li {
-    list-style-type: none;
-    cursor: pointer;
+/*...head.......*/
+
+.page {
+    min-width: 1000px;
+    height: 700px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.border {
+    border: 1px solid #000;
+}
+
+.head-row {
+    width: 100%;
+    height: 60px;
+    background-color: #eee;
+}
+
+.head-row .container {
+    min-width: 1000px;
+}
+
+.head-row .container .head {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+}
+
+.head-row .container .head .head-box {
+    margin-top: 15px;
+    height: 30px;
+    padding: 0;
+}
+
+.head-row .container .head .head-box>div {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background: #5a9ad7;
+}
+
+.head-row .container .head .head-box>button {
+    border: 0;
+}
+
+.head-row .container .head .head-box .head-box-style {
+    display: block;
+    background: #5a9ad7;
+    width: 80%;
+    margin-left: 10%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
 }
 
 /*.........collect.......*/
+
+li {
+    list-style-type: none;
+}
 
 .collect {
     height: 700px;
@@ -26,25 +84,22 @@ li {
     padding-right: 1.5%;
 }
 
-.collect-left>div {
-    width: auto;
-    height: 40px;
-    background: #5a9ad7;
-    line-height: 40px;
-    margin-top: 5%;
-    border-radius: 10px;
+.collect-left-ul {
+    margin-top: 25px;
+    padding: 0;
 }
 
-.collect-left>ul>li {
+.collect-left-ul>li {
     height: 36px;
     border-radius: 10px;
     font-size: 30px;
     text-align: center;
+    cursor: pointer;
     color: #FFF;
 }
 
-.collect-left>ul>li>div>a,
-.collect-left>ul>li>div>span {
+.collect-left-ul>li>div>a,
+.collect-left-ul>li>div>span {
     color: #fff;
     margin-right: 30%;
 }
@@ -55,7 +110,7 @@ li {
 }
 
 .collect-right-box {
-    height: 200px;
+    height: auto;
 }
 
 .collect-right-box-cover {
@@ -67,30 +122,33 @@ li {
     position: relative;
 }
 
-.collect-right-box-cover>img{
+.collect-right-box-cover>img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    /*padding-bottom: 25%;*/
 }
 
-.collect-right-box-cover a{
-    display: none;
-    text-decoration: none;
-}
-
-.collect-right-box-cover:hover a{
+.collect-right-box-cover a {
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
-    background: rgb(0, 0, 0, 0.2);
+    background: rgb(0, 0, 0);
     color: yellow;
     font-size: 16px;
     text-align: center;
     line-height: 140px;
+    transition: opacity 2s;
+    opacity: 0;
+}
+
+.collect-right-box-cover a:hover {
+    text-decoration: none;
+    opacity: 0.4;
+    transition-duration: 0s;
 }
 
 .collect-right-box>p {
@@ -104,21 +162,17 @@ li {
 .collect-footer {
     text-align: center;
     background: #eee;
-    height: 36px;
+    height: 127px;
 }
 
-
-
 /* .......search........  */
-
-
 
 .search-title {
     margin-top: 100px;
     min-width: 1000px;
-  text-align: center;
-  font-size: 36px;
-  color: #5a9ad7;
+    text-align: center;
+    font-size: 36px;
+    color: #5a9ad7;
 }
 
 .search-box {
@@ -147,36 +201,36 @@ li {
     font-size: 16px;
 }
 
-.search-box #search-total{
+.search-box #search-total {
     font-size: 18px;
     color: #5a9ad7;
 }
 
 #search-main {
-    width:100%;
-    margin:0 auto;
-    background:#ddd;
+    width: 100%;
+    margin: 0 auto;
+    background: #ddd;
 }
 
 #search-main ul {
-    width:960px;
+    width: 960px;
     min-height: 642px;
-    height:auto;
-    overflow:hidden;
-    padding-top:30px;
-    margin:0 auto;
+    height: auto;
+    overflow: hidden;
+    padding-top: 30px;
+    margin: 0 auto;
 }
 
-#search-main > ul >li {
-    list-style:none;
-    width:960px;
-    height:auto;
-    border:1px solid #5a9ad7;
-    float:left;
-    margin-right:10px;
-    margin-bottom:10px;
-    padding:10px;
-    background:#fff;
+#search-main>ul>li {
+    list-style: none;
+    width: 960px;
+    height: auto;
+    border: 1px solid #5a9ad7;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #fff;
 }
 
 #search-main-list li img {
@@ -190,10 +244,10 @@ li {
     height: 24px;
     font-size: 18px;
     text-align: left;
-    overflow:hidden;
+    overflow: hidden;
 }
 
-.collect-button > button{
+.collect-button>button {
     margin-top: 180px;
     width: 100px;
     height: 36px;
@@ -213,28 +267,28 @@ li {
 }
 
 #search-bottom {
-    height:100px;
-    background:#5a9ad7;
+    height: 100px;
+    background: #5a9ad7;
 }
 
 #search-bottom-tip {
-    margin-left:200px
+    margin-left: 200px
 }
 
 #search-bottom-tip li {
-    width:30px;
-    height:30px;
-    border-radius:50%;
-    margin-right:10px;
-    margin-top:20px;
-    float:left;
-    list-style:none;
-    text-align:center;
-    line-height:30px;
-    color:#fff;
-    cursor:pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 20px;
+    float: left;
+    list-style: none;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    cursor: pointer;
 }
 
 #search-bottom-tip li.active {
-    background:orange;
+    background: orange;
 }
