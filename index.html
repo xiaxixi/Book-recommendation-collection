@@ -7,6 +7,7 @@
     <title>推荐</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <!-- <link type="text/php" href="php/book.php"> -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/xcConfirm.css">
     <link href="css/recommend.css" rel="stylesheet">
@@ -39,30 +40,30 @@
             </div>
         </div>
     </div>
-       
+
     <div class="page container">
         <div class="main row">
-            <!-- book1 -->
             <div class="main-left col-md-9 col-xs-9 col-lg-9 row">
-                <!-- 封面 -->
-                <div class="main-left-cover col-md-3 col-xs-3 col-lg-3"></div>
+                <div class="main-left-cover col-md-3 col-xs-3 col-lg-3">
+                    <img src="" alt="">
+                    <a href="">learn more</a>
+                </div>
                 <div class="main-left-info col-md-6 col-xs-6 col-lg-6">
                     <div class="col-md-4 col-xs-4 col-lg-4">书名：</div>
-                    <span class="title col-md-8 col-xs-8 col-lg-8"></span>
+                    <textarea class="title col-md-8 col-xs-8 col-lg-8" id="title" disabled="disabled"></textarea> 
                     <div class="col-md-4 col-xs-4 col-lg-4">作者：</div>
-                    <span class="author col-md-8 col-xs-8 col-lg-8"></span>
+                    <textarea class="author col-md-8 col-xs-8 col-lg-8" id="author" disabled="disabled"></textarea> 
                     <div class="col-md-4 col-xs-4 col-lg-4">种类：</div>
-                    <span class="type col-md-8 col-xs-8 col-lg-8"></span>
-                    <div class="col-md-4 col-xs-4 col-lg-4">星级：</div>
-                    <span class="starlevel col-md-8 col-xs-8 col-lg-8"></span>
-                    <div class="col-md-5 col-xs-5 col-lg-5">收藏量：</div>
-                    <span class="collectnum col-md-7 col-xs-7 col-lg-7"></span> 
+                    <textarea class="type col-md-8 col-xs-8 col-lg-8" id="type" disabled="disabled"></textarea> 
+                    <div class="col-md-4 col-xs-4 col-lg-4">评分：</div>
+                    <textarea class="grade col-md-8 col-xs-8 col-lg-8" id="type" disabled="disabled"></textarea> 
                 </div>
-                <!-- 收藏按钮 -->
-                <div class="main-left-button col-md-2 col-xs-2 col-lg-2">
-                    <button>+收藏</button>
+                <div class="main-collect-button col-md-2 col-xs-2 col-lg-2">
+                    <button onclick="load()">+收藏</button>
                 </div>
-                <!-- 介绍 -->
+                <div class="main-change-button col-md-2 col-xs-2 col-lg-2">
+                    <button>换一换</button>
+                </div>
                 <div class="main-left-introduce col-md-12 col-xs-12 col-lg-12"></div>
             </div>
                
@@ -78,9 +79,14 @@
 
         </div>
     </div>
+
+    <div id="intxt"></div>
+    <div><?php
+echo "Hello World!";
+?></div>
 </body>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/xcConfirm.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
-
+<script type="text/javascript" src="js/recommend.js"></script>
 </html>
