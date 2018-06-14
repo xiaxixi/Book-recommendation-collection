@@ -46,16 +46,15 @@
 *注：新注册用户favorite_type为null。
 * bookTable
 
-| book_id   | title              | author           |cover_addr               | type     | star_level | intro                                                                          | collect_num |
+| book_id   | title              | author           |cover_addr               | type     |   grade    | intro                                                                          |
 |:---------:| :-----------------:| :--------------: |:----------------------: | :-------:| :--------: | :-----------------------------------------------------------------------------: | :---------: |
-| 1         | HTml5与css3基础教程 | Elizabeth Castro | images/book_1_cover.png | computer | 4          | 讲解html和css入门知识的经典畅销书，全面系统的讲解html5和css的基础知识以及实际运用技术 |           0 |
+| 1         | HTml5与css3基础教程 | Elizabeth Castro | images/book_1_cover.png | computer | 4          | 讲解html和css入门知识的经典畅销书，全面系统的讲解html5和css的基础知识以及实际运用技术 |
 * userCollectTable
 
-| user_id | book_id | read_state |
-| :-----: | :-----: | :--------: |
-| 1       | 1       | 1          |
-| 1       | 2       | 0          |
-*注：1表示已读，0表示未读。
+| user_id | book_id |
+| :-----: | :-----: |
+| 1       | 1       |
+| 1       | 2       |
 
 功能模块
 >    1. 登录注册功能</br>
