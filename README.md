@@ -20,13 +20,16 @@
 ![](img/register.jpg)
 
 2. 推荐界面</br>
-![](http://106.15.186.59/image/intro.jpg)
+![](img/recomend.PNG)
 
 3. 个人收藏界面</br>
 ![](img/collect.png)
 
 4. 搜索界面</br>
 ![](img/search.png)
+
+5. 个人中心</br>
+![](img/usercenter.PNG)
 
 5. 书友圈界面</br>
 ![](img/circle.jpg)
@@ -36,10 +39,10 @@
 
 * userTable
 
-| user_id  | name    | password | favourite_type |
-| :------: | :-----: | :------: | :------------: |
-| 1        | abc     |    123   |    math        |
-| 2        | def     |    456   |    computer    |
+| user_id  | name    | password | favourite_type | image.addr | 
+| :------: | :-----: | :------: | :------------: | :--------: |
+| 1        | abc     |    123   |    math        | img/xx.jpg |
+| 2        | def     |    456   |    computer    |            |
 *注：新注册用户favorite_type为null。
 * bookTable
 
@@ -56,7 +59,7 @@
 
 功能模块
 >    1. 登录注册功能</br>
->    根据用户在注册界面的输入，添加数据到后端数据库userTable中。
+>    根据用户在注册界面的输入，添加数据到后端数据库userTable中。同时请用户填写喜欢书籍的类型。
 >    登录时，判断输入是否和userTable中的数据匹配，如果匹配登录，刷新页面；
 >    反之，提示“用户名或密码错误”。
 >    2. 推荐书籍功能</br>
@@ -72,10 +75,8 @@
 >    如果点击，表示该书被收藏，
 >    如果再点击一下，表示该书被移除收藏。
 >    相关的响应函数，鼠标点下，数据库userCollectTable增加一行数据，
->    并且bookTable中的收藏量（collect_num）加一；
 >    鼠标再次点击，移除收藏，
 >    数据库userCollectTable删除与book_id匹配的一行数据，
->    并且bookTable中的收藏量（collect_num）减一。
 >    4. 搜索书籍功能</br>
 >    根据输入，调用豆瓣的搜索API，根据关键字搜索相关的书籍，在界面上显示相关书籍的书名、作者、出版社、豆瓣评分以及简介，最多显示20条数据；
 >    反之，显示“查无此书”。
@@ -91,7 +92,7 @@
 
 
 项目分工
->    1. 推荐界面：郑柳
+>    1. 推荐界面、个人中心：郑柳
 >    2. 收藏界面、搜索界面：王胤凯
 >    3. 登录注册界面、书友圈界面：陈铭璇 </br>
 >    每个界面，包括所有的前端后端，相关算法和响应函数
