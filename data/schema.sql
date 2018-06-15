@@ -11,11 +11,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
 --
 -- Database: `login`
 --
@@ -75,14 +70,14 @@ CREATE TABLE IF NOT EXISTS `usertable` (
   `user_name` varchar(24) CHARACTER SET utf8mb4 NOT NULL COMMENT '用户名',
   `password` varchar(24) NOT NULL COMMENT '密码',
   `favourite_type` varchar(50) DEFAULT NULL COMMENT '书籍喜好',
-  `image.addr` varchar(200) NOT NULL DEFAULT 'http://47.100.172.51/shared/images/user.gif' COMMENT '用户头像存储地址',
+  `image_addr` varchar(200) NOT NULL DEFAULT 'http://47.100.172.51/shared/images/user.gif' COMMENT '用户头像存储地址',
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `user_name` (`user_name`),
   UNIQUE KEY `user_id` (`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- 插入之前先把表清空（truncate） `user`
+-- 插入之前先把表清空（truncate） `usertable`
 --
 
 TRUNCATE TABLE `usertable`;
@@ -90,9 +85,10 @@ TRUNCATE TABLE `usertable`;
 -- 转存表中的数据 `usertable`
 --
 
-INSERT INTO `usertable` (`user_id`, `user_name`, `password`, `favourite_type`, `image.addr`) VALUES
+INSERT INTO `usertable` (`user_id`, `user_name`, `password`, `favourite_type`, `image_addr`) VALUES
 (1, 'admin', '123456', NULL, 'http://47.100.172.51/shared/images/user.gif');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
