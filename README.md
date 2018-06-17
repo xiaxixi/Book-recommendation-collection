@@ -39,7 +39,7 @@
 
 * userTable
 
-| user_id  | name    | password | favourite_type |                  image.addr                  | 
+| user_id  | name    | password | favourite_type |                  image_addr                  | 
 | :------: | :-----: | :------: | :------------: | :------------------------------------------: |
 | 1        | abc     |    123   |    math        | http://106.14.151.175/user-image/default.jpg |
 | 2        | def     |    456   |    computer    |                                              |
