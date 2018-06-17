@@ -8,13 +8,13 @@
 
 .page {
     min-width: 1000px;
-    height: 1000px;
+    height: auto;
     border: 1px solid #aaa;
     border-radius: 5px;
 }
 
 .page .main {
-    height: 940px;
+    height: auto;
     padding: 0;
     margin: 0;
 }
@@ -23,11 +23,10 @@
     border: 0;
 }
 
-.page .main .main-left {
-    height: 800px;
-    padding: 0;
-    margin-left: 25px;
+.page .main > div {
+    height: 10px;
 }
+
 
 .page .main .main-left-cover {
     margin-top: 25px;
@@ -61,46 +60,47 @@
     line-height: 140px;
 }
 
-.page .main .main-left-info {
+
+.page .main .main-right-info {
     margin-top: 50px;
     height: 300px;
 }
 
-.page .main .main-left-info > div {
+.page .main .main-right-info div:nth-child(2n+1) {
     margin-bottom: 20px;
-    font-size: 20px;
-    text-align: left;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: right;
 }
 
-.page .main .main-left-info > span {
+.page .main .main-right-info div:nth-child(2n) {
     margin-bottom: 20px;
     height: 40px;
-    font-size: 18px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-
-.page .main .main-left-info > textarea {
-    margin-bottom: 20px;
-    height: 40px;
+    padding-top: 10px;
 
     font-size: 18px;
     line-height: 18px;
     text-align: left;
-    align-items: center;
 
-    overflow:hidden;
-    resize:none;
-    word-wrap: break-word;
-    background-color: #fff;
-    /*border-color: #fff;*/
+    overflow: hidden;  
+    /*文本不换行*/  
+    white-space: nowrap;  
+    /*文字超出用省略号*/  
+    text-overflow:ellipsis;
+}
+
+
+.page .main .main-collect-button {
+    position: relative;
+    top: -60px;
+}
+
+.page .main .main-change-button {
+    position: relative;
+    top: -60px;
 }
 
 .page .main .main-collect-button > button {
-    position: relative;
-    left: -130px;
-    top: 293px;
-
     width: 100px;
     height: 36px;
     background: #5a9ad7;
@@ -108,13 +108,10 @@
     line-height: 36px;
     text-align: center;
     border: 0;
+    border-radius: 5px;
 }
 
 .page .main .main-change-button > button {
-    position: relative;
-    left: 30px;
-    top: 257px;
-
     width: 100px;
     height: 36px;
     background: #5a9ad7;
@@ -122,36 +119,22 @@
     line-height: 36px;
     text-align: center;
     border: 0;
+    border-radius: 5px;
 }
 
-.page .main .main-left-introduce {
-    margin-top: 20px;
-    height: 500px;
-    border: 1px solid #ccc;
+
+.page .main .main-introduce {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-.page .main .main-right > ul {
+.page .main .intro {
     position: relative;
-    top: 50px;
-    width: 100%;
-    list-style-type: none;
-}
+    top: 40px;
+    height: 600px;
 
-.page .main .main-right > ul > li .second {
-    position: relative;
-
-    width: 80px;
-    height: 40px;
-    padding: 10px;
-    float: left;
-    background: #5a9ad7;
-    display: none;
-    color: #fff;
-    text-align: center;
-}
-
-#intxt {
-    width: 400px;
-    height: 200px;
-    border: 1px solid #aaa;
+    font-size: 18px;
+    text-indent: 2em;
+    line-height: 30px;
 }

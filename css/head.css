@@ -35,13 +35,28 @@
     padding: 0;
 }
 
-/*以后换头像*/
 .head-row .container .head .head-box > a {
     display: block;
     width: 35px;
     height: 35px;
-    border-radius: 15px;
-    background-image: url("../img/icons.png");
+    border-radius: 25px;
+}
+
+ /*头像*/
+.head-row .container .head .head-box > img {
+    display: block;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border-radius: 25px;
+}
+
+/*用户名*/
+.head-row .container .head .head-box .head-user-name {
+    float: left;
+    position: relative;
+    top: -25px;
+    left: 40px;
 }
 
 .head-row .container .head .head-box .head-box-style {

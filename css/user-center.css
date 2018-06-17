@@ -6,7 +6,6 @@
  * @version $Id$
  */
 
-
 /*...............................................................*/
 .page {
     min-width: 1000px;
@@ -34,20 +33,38 @@
     margin: 35px;
     width: 120px;
     height: 120px;
-    border-radius: 120px;
-    background-image: url("../img/icons.png");
+    padding: 0;
+
+    border-radius: 60px;
+    overflow: hidden;
 }
 
 .page .main .user-information .user-name {
     margin-top: 60px;
     height: 50px;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
+
+    font-size: 22px;
+
+    overflow: hidden;  
+    /*文本不换行*/  
+    white-space: nowrap;  
+    /*文字超出用省略号*/  
+    text-overflow:ellipsis;
 }
 
 .page .main .user-information .user-favourite-type {
     margin-top: 10px;
     height: 50px;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
+
+    font-size: 22px;
+
+    overflow: hidden;  
+    /*文本不换行*/  
+    white-space: nowrap;  
+    /*文字超出用省略号*/  
+    text-overflow:ellipsis;
 }
 
 .page .main .user-cerrent-collection {
@@ -74,8 +91,7 @@
 .page .main .user-cerrent-collection .user-book .user-book-cover {
     width: 40%;
     height: 80%;
-    margin: auto;
-    background-image: url("../img/icons.png");
+    margin-left: 30%;
 }
 
 .page .main .user-cerrent-collection .user-book .user-book-title {
