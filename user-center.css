@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Zheng Liu (995170241@qq.com)
+ * @date    2018-06-06 17:48:29
+ * @version $Id$
+ */
+
+/*...............................................................*/
+.page {
+    min-width: 1000px;
+    height: 502px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.page .main {
+    height: 940px;
+    padding: 0;
+    margin: 0;
+}
+
+.page .main .user-information {
+    width: 998px;
+    height: 200px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+/*以后有时间可以研究一下控件css，修改*/
+.page .main .user-information .user-image {
+    margin: 35px;
+    width: 120px;
+    height: 120px;
+    padding: 0;
+
+    border-radius: 60px;
+    overflow: hidden;
+}
+
+.page .main .user-information .user-name {
+    margin-top: 60px;
+    height: 50px;
+    /*border: 1px solid #ccc;*/
+
+    font-size: 22px;
+
+    overflow: hidden;  
+    /*文本不换行*/  
+    white-space: nowrap;  
+    /*文字超出用省略号*/  
+    text-overflow:ellipsis;
+}
+
+.page .main .user-information .user-favourite-type {
+    margin-top: 10px;
+    height: 50px;
+    /*border: 1px solid #ccc;*/
+
+    font-size: 22px;
+
+    overflow: hidden;  
+    /*文本不换行*/  
+    white-space: nowrap;  
+    /*文字超出用省略号*/  
+    text-overflow:ellipsis;
+}
+
+.page .main .user-cerrent-collection {
+    width: 998px;
+    height: 300px;
+    background-color: #fff;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.page .main .user-cerrent-collection > div:first-child {
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.page .main .user-cerrent-collection .user-book {
+    height: 220px;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.page .main .user-cerrent-collection .user-book .user-book-cover {
+    width: 40%;
+    height: 80%;
+    margin-left: 30%;
+}
+
+.page .main .user-cerrent-collection .user-book .user-book-title {
+    padding: 15px;
+    text-align: center;
+}
