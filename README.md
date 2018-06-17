@@ -39,16 +39,16 @@
 
 * userTable
 
-| user_id  | name    | password | favourite_type |                  image.addr             | 
-| :------: | :-----: | :------: | :------------: | :-------------------------------------: |
-| 1        | abc     |    123   |    math        | http://106.14.151.175/user-image/xx.jpg |
-| 2        | def     |    456   |    computer    |                                         |
-*注：新注册用户favorite_type为null。
+| user_id  | name    | password | favourite_type |                  image.addr                  | 
+| :------: | :-----: | :------: | :------------: | :------------------------------------------: |
+| 1        | abc     |    123   |    math        | http://106.14.151.175/user-image/default.jpg |
+| 2        | def     |    456   |    computer    |                                              |
+
 * bookTable
 
-| book_id   | title              | author           |cover_addr                                | type     |   grade    | intro                                                                          |
-|:---------:| :-----------------:| :--------------: |:---------------------------------------: | :-------:| :--------: | :-----------------------------------------------------------------------------: |
-| 1         | HTml5与css3基础教程 | Elizabeth Castro | http://106.14.151.175/cover-image/xx.jpg | computer | 9.0        | 讲解html和css入门知识的经典畅销书，全面系统的讲解html5和css的基础知识以及实际运用技术 |
+| book_id   | title              | author           |cover_addr                                     | type     |   grade    | intro                                                                          |
+|:---------:| :-----------------:| :--------------: |:--------------------------------------------: | :-------:| :--------: | :-----------------------------------------------------------------------------: |
+| 1         | HTml5与css3基础教程 | Elizabeth Castro | http://106.14.151.175/cover-image/深入理解.jpg | computer | 9.0        | 讲解html和css入门知识的经典畅销书，全面系统的讲解html5和css的基础知识以及实际运用技术 |
 * usercollectTable
 
 | user_id | name | book_id |
