@@ -2,10 +2,10 @@
 /**
  * 
  * @authors Zheng Liu (995170241@qq.com)
- * @date    2018-06-18 01:28:18
+ * @date    2018-06-18 12:28:18
  * @version $Id$
  */
- 
+
     $servername ="localhost";
     $username   ="root";
     $password   ="";
@@ -18,25 +18,19 @@
     }
 
     mysql_select_db($database, $conn);
-    mysql_query("SET NAMES UTF8");
 
-    $sql = "select distinct `book`.*, name, image_addr from `book`, `user`
-    where
-    `book`.book_id not in
-        (select `usercollect`.book_id from `usercollect` where `usercollect`.user_id = '1')
-    and type = 
-        (select favorite_type from `user` where user_id = '1')";
-    
+    $sql = "select user_id, name, image_addr, favorite_type, book_id, title, cover_addr from `user` natural join `usercollect` natural join `book` where user_id = '1'";
+    mysql_query("SET NAMES UTF8");
     $result = mysql_query($sql);
-    $books=array(); 
+    $userBooks=array(); 
     $i=0;
 
     if(mysql_num_rows($result) > 0) {
         while($row = mysql_fetch_assoc($result)) {
-            $books[$i]= $row;
+            $userBooks[$i]= $row;
             $i++; 
         }
-        echo json_encode($books); 
+        echo json_encode($userBooks); 
     }
     else {
         echo none;
