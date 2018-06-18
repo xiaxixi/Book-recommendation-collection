@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>推荐</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link href="../css/recommend.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/head.css">
+</head>
+
+<body onload="load();">
+    <!-- 头 -->
+    <div class="head-row">
+        <div class="container">
+            <div class="head row frosted-glass">
+                <div class="head-box col-md-2 col-xs-2 col-lg-2">
+                    <a class="head-box-style" href="recommend.html">推荐</a>
+                </div>
+                <div class="head-box col-md-2 col-xs-2 col-lg-2">
+                    <a class="head-box-style" href="search.html">搜索</a>
+                </div>
+                <div class="head-box col-md-2 col-xs-2 col-lg-2">
+                    <a class="head-box-style" href="user-collect.php" id="head-collect">收藏夹</a>
+                </div>
+                <div class="head-box col-md-2 col-xs-2 col-lg-2"></div>
+                <!-- 头像 -->
+                <div class="head-box col-md-2 col-xs-2 col-lg-2">
+                    <img src="?" id="head-user-image">
+                    <a class="head-user-name" href="?" id="head-user-name"></a>
+                </div>
+                <div class="head-box col-md-2 col-xs-2 col-lg-2">
+                    <a class="head-box-style" href="../index.html" id="login">登陆</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page container">
+        <div class="main row">
+                <div class="col-md-2 col-xs-2 col-lg-2"></div>
+                <div class="main-left-cover col-md-3 col-xs-3 col-lg-3">
+                    <img src="?" id="cover">
+                    <a href="?" id="LearnMore" target="view_frame">learn more</a>
+                </div>
+                <div class="main-right-info col-md-6 col-xs-6 col-lg-6">
+                    <div class="col-md-4 col-xs-4 col-lg-4">书名：</div>
+                    <div class="title col-md-8 col-xs-8 col-lg-8" id="title"></div>
+                    <div class="col-md-4 col-xs-4 col-lg-4">作者：</div>
+                    <div class="author col-md-8 col-xs-8 col-lg-8" id="author"></div>
+                    <div class="col-md-4 col-xs-4 col-lg-4">种类：</div>
+                    <div class="type col-md-8 col-xs-8 col-lg-8" id="type"></div>
+                    <div class="col-md-4 col-xs-4 col-lg-4">评分：</div>
+                    <div class="grade col-md-8 col-xs-8 col-lg-8" id="grade"></div>
+                </div>
+                <div class="col-md-1 col-xs-1 col-lg-1"></div>
+
+                <div class="col-md-5 col-xs-5 col-lg-5"></div>
+                <div class="main-collect-button col-md-2 col-xs-2 col-lg-2">
+                    <button id="collect-buttom" id="collect-buttom">+收藏</button>
+                </div>
+                <div class="main-change-button col-md-2 col-xs-2 col-lg-2">
+                    <button onclick="change();">换一换</button>
+                </div>
+                <div class="col-md-3 col-xs-3 col-lg-3"></div>
+
+                <div class="col-md-1 col-xs-1 col-lg-1"></div>
+                <div class="main-introduce col-md-10 col-xs-10 col-lg-10">简介：</div>
+                <div class="col-md-1 col-xs-1 col-lg-1"></div>
+                <div class="intro col-md-10 col-xs-10 col-lg-10 col-md-offset-1 col-xs-offset-1 col-lg-offset-1" id="intro"></div>
+                <div class="col-md-1 col-xs-1 col-lg-1"></div>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<!-- <script type="text/javascript" src="js/head-user.js"></script> -->
+<script type="text/javascript" src="../js/recommend.js"></script>
+<script type="text/javascript" src="../js/collect.js"></script>
+</html>
