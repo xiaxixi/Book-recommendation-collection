@@ -2,7 +2,7 @@
 /**
  * 
  * @authors Zheng Liu (995170241@qq.com)
- * @date    2018-06-18 01:28:18
+ * @date    2018-06-18 23:25:45
  * @version $Id$
  */
 
@@ -10,6 +10,7 @@
 
     session_start(); 
     $name = $_SESSION["name"];
+    // echo "<script> alert($name); </script>"; 
 
     $servername ="localhost";
     $username   ="root";
@@ -24,30 +25,20 @@
     }
 
     mysqli_select_db($conn, $database);
-    
-    $sql = "select distinct `book`.*, name, image_addr, Alt from `book`, `user`
-        where
-        `book`.book_id not in
-            (select `usercollect`.book_id from `usercollect` where `usercollect`.name = '$name')
-        and type = 
-            (select favourite_type from `user` where name = '$name')";
 
-    
+    $sql = "select image_addr, name from `user` where name = '$name'";
+
     $result = mysqli_query($conn, $sql);
-    $books=array(); 
+    $user=array(); 
     $i=0;
 
     if($result && mysqli_num_rows($result)>0) {
         while($row = mysqli_fetch_assoc($result)) {
-            $books[$i]= $row;
+            $user[$i]= $row;
             $i++;
         }
-        echo json_encode($books); 
-    }
-
-    else {
-        echo "none";
+        echo json_encode($user); 
     }
 
     mysqli_close($conn);
-?>
+?> 
