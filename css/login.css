@@ -35,3 +35,7 @@
 .container .panel-default .panel-body {
     margin: 15px 15px -15px 15px;
 }
+
+.container .panel-default .panel-body .checkbox{
+    margin-left: 2px;
+}
