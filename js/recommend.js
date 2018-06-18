@@ -5,7 +5,7 @@
  * @version $Id$
  */
 
-var loginFlag = 1;
+var loginFlag = 0;
 var xmlHttp;
 
 function load() { 
@@ -29,18 +29,26 @@ var i = 0;
 function stateChanged() { 
     if (xmlHttp.readyState == 4 || xmlHttp.readyState == 200) {
         jsonstr = xmlHttp.responseText;
+        // console.log(jsonstr);
+        // var iLength = 100;
+        // jsonstr.substring(iLength, jsonstr.Length - iLength);
         console.log(jsonstr);
         recommend_book = JSON.parse(jsonstr);
 
-        if(loginFlag == 0) {
+        if(recommend_book[0].name == "未登录") {
             document.getElementById("head-user-image").src = recommend_book[0].image_addr;
             document.getElementById("head-user-name").innerHTML = "未登录";
+            document.getElementById("head-user-name").href = "html/login.html";
+            document.getElementById("head-collect").href = "html/login.html";
+            loginFlag = 0;
         }
 
         else {
             document.getElementById("head-user-image").src = recommend_book[0].image_addr;
             document.getElementById("head-user-name").innerHTML = recommend_book[0].name;
-            document.getElementById("login").innerHTML = "";
+            document.getElementById("head-user-name").href = "html/user-center.html";
+            document.getElementById("head-collect").href = "html/collect.php";
+            loginFlag = 1;
         }
 
         document.getElementById("cover").src = recommend_book[i].cover_addr;
@@ -49,8 +57,6 @@ function stateChanged() {
         document.getElementById("type").innerHTML = recommend_book[i].type;
         document.getElementById("grade").innerHTML = recommend_book[i].grade;
         document.getElementById("intro").innerHTML = recommend_book[i].intro;
-        loginFlag = 1;
-        // console.log('1');
     }
 }
 
@@ -72,14 +78,9 @@ function GetXmlHttpObject() {
     return xmlHttp;
 }
 
-function collect() {
-
-}
-
 function change() {
     if(jsonstr == "none") {
         //跳转没有更多推荐界面
-        // header("Location:Book-recommendation-collection-master/Book-recommendation-collection-master/html/none.html");
         window.location.href='html/none.html';
     }
 
@@ -103,5 +104,4 @@ function change() {
             document.getElementById("intro").innerHTML = recommend_book[i].intro;
         }
     }
-    console.log(2);
 }

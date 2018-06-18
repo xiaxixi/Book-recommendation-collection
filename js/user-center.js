@@ -38,7 +38,7 @@ function stateChanged() {
         document.getElementById("user-favourite-type").innerHTML += user_book[0].favorite_type;
         document.getElementById("user-image").src = user_book[0].image_addr;
 
-        console.log(user_book.length);
+        // console.log(user_book.length);
 
         if(user_book.length == 0) {
             document.getElementById("user-book1").innerHTML = "<div style='font-size: 20px;color: #aaa;text-align: center;padding-top:25%'>这个人很懒，什么都没收藏！</div>";
