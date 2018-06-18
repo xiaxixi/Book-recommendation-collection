@@ -10,32 +10,23 @@ $(function() {
         var BookId = recommend_book[i].book_id;
         var UserName = recommend_book[0].name;
         var alt = recommend_book[i].Alt;
+        // alert(BookId + " " + UserName);
 
-        if(UserName == "未登录") {
-            alert("请登录后收藏");
-        }
-
-        else {
-            $.ajax({
-                url: "php/collect.php",
-                type: "POST",
-                dataType: "TEXT",
-                data: {
-                    'name': UserName,
-                    'book_id':BookId,
-                    'Alt': alt
-                },
-                success: function(data) {
-                    if(data.trim() == "OK") {
-                        alert("收藏成功！");
-                    }
-
-                    else {
-                        alert("收藏失败！");
-                    }
-                }
-            });
-        }
+        $.ajax({
+            url: "../php/collect.php",
+            type: "POST",
+            dataType: "TEXT",
+            data: {
+                'name': UserName,
+                'book_id':BookId,
+                'Alt': alt
+            },
+            success: function(data) {
+                document.getElementById("collect-buttom").innerHTML = "已收藏";
+                document.getElementById("collect-buttom").style.background = "#aaa";
+                alert("收藏成功！");
+            }
+        });
 
     })
 })

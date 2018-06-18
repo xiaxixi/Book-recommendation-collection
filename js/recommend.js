@@ -5,7 +5,7 @@
  * @version $Id$
  */
 
-var loginFlag = 0;
+// var loginFlag = 0;
 var xmlHttp;
 
 function load() { 
@@ -14,7 +14,7 @@ function load() {
         alert ("Browser does not support HTTP Request");
         return;
     }
-    var url = "php/book.php";
+    var url = "../php/book.php";
     // url=url+"?q="+str;
     // url=url+"&sid="+Math.random();
     xmlHttp.onreadystatechange = stateChanged;
@@ -29,34 +29,29 @@ var i = 0;
 function stateChanged() { 
     if (xmlHttp.readyState == 4 || xmlHttp.readyState == 200) {
         jsonstr = xmlHttp.responseText;
-        // console.log(jsonstr);
-        // var iLength = 100;
-        // jsonstr.substring(iLength, jsonstr.Length - iLength);
         console.log(jsonstr);
-        recommend_book = JSON.parse(jsonstr);
 
-        if(recommend_book[0].name == "未登录") {
-            document.getElementById("head-user-image").src = recommend_book[0].image_addr;
-            document.getElementById("head-user-name").innerHTML = "未登录";
-            document.getElementById("head-user-name").href = "html/login.html";
-            document.getElementById("head-collect").href = "html/login.html";
-            loginFlag = 0;
+        if(jsonstr == "none") {
+            //跳转没有更多推荐界面
+            window.location.href='none.html';
         }
 
         else {
+            recommend_book = JSON.parse(jsonstr);
+            // console.log(recommend_book[0].name);
+
             document.getElementById("head-user-image").src = recommend_book[0].image_addr;
             document.getElementById("head-user-name").innerHTML = recommend_book[0].name;
-            document.getElementById("head-user-name").href = "html/user-center.html";
-            document.getElementById("head-collect").href = "html/collect.php";
-            loginFlag = 1;
-        }
+            document.getElementById("head-user-name").href = "user-center.html";
 
-        document.getElementById("cover").src = recommend_book[i].cover_addr;
-        document.getElementById("title").innerHTML = recommend_book[i].title;
-        document.getElementById("author").innerHTML = recommend_book[i].author;
-        document.getElementById("type").innerHTML = recommend_book[i].type;
-        document.getElementById("grade").innerHTML = recommend_book[i].grade;
-        document.getElementById("intro").innerHTML = recommend_book[i].intro;
+            document.getElementById("LearnMore").href = recommend_book[i].Alt;
+            document.getElementById("cover").src = recommend_book[i].cover_addr;
+            document.getElementById("title").innerHTML = recommend_book[i].title;
+            document.getElementById("author").innerHTML = recommend_book[i].author;
+            document.getElementById("type").innerHTML = recommend_book[i].type;
+            document.getElementById("grade").innerHTML = recommend_book[i].grade;
+            document.getElementById("intro").innerHTML = recommend_book[i].intro;
+        }
     }
 }
 
@@ -81,12 +76,24 @@ function GetXmlHttpObject() {
 function change() {
     if(jsonstr == "none") {
         //跳转没有更多推荐界面
-        window.location.href='html/none.html';
+        window.location.href='none.html';
+    }
+
+    else if(recommend_book.length == 1) {
+        // document.getElementById("collect-buttom").innerHTML = "+收藏";
+        // document.getElementById("collect-buttom").style.background = "#5a9ad7";
+
+        alert("书库中就只剩这一本符合您喜欢类型的书籍了！");
     }
 
     else {
-        i+=2;
+        document.getElementById("collect-buttom").innerHTML = "+收藏";
+        document.getElementById("collect-buttom").style.background = "#5a9ad7";
+
+        i++;
         if(i < recommend_book.length) {
+            document.getElementById("LearnMore").href = recommend_book[i].Alt;
+            document.getElementById("cover").src = recommend_book[i].cover_addr;
             document.getElementById("title").innerHTML = recommend_book[i].title;
             document.getElementById("author").innerHTML = recommend_book[i].author;
             document.getElementById("type").innerHTML = recommend_book[i].type;
@@ -94,9 +101,9 @@ function change() {
             document.getElementById("intro").innerHTML = recommend_book[i].intro;
         }
         else {
-            // header("Location:Book-recommendation-collection-master/Book-recommendation-collection-master/html/none.html");
-            // window.location.href='html/none.html';
             i = 0;
+            document.getElementById("LearnMore").href = recommend_book[i].Alt;
+            document.getElementById("cover").src = recommend_book[i].cover_addr;
             document.getElementById("title").innerHTML = recommend_book[i].title;
             document.getElementById("author").innerHTML = recommend_book[i].author;
             document.getElementById("type").innerHTML = recommend_book[i].type;
