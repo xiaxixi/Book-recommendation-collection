@@ -7,7 +7,7 @@
  * @version $Id$
  */
 	
-	header("Content-type: text/html; charset=utf-8"); 
+    header("Content-type: text/html; charset=utf-8"); 
 
     $servername = "127.0.0.1";
     $username   = "root";
@@ -40,12 +40,12 @@
          	$query = "select * from user where name = '{$_POST['name']}' and pwd != '{$_POST['pwd']}'";
             $result = mysqli_query($conn, $query);
             if (1 == mysqli_num_rows($result))
-                echo "<script>alert('密码填写有误，请重新填写');history.go(-1);</script>";  
+                echo "<script>alert('密码填写有误,请重新填写');history.go(-1);</script>";  
 
             $query = "select * from user where name = '{$_POST['name']}'";
             $result = mysqli_query($conn, $query);
             if (0 == mysqli_num_rows($result))
-                echo "<script>alert('用户名填写有误，请重新填写');history.go(-1);</script>";
+                echo "<script>alert('用户名填写有误,请重新填写');history.go(-1);</script>";
             
         } 
         // 释放结果
