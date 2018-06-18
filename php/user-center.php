@@ -6,6 +6,15 @@
  * @version $Id$
  */
 
+    $name = "未登录";
+    session_start(); 
+    $_SESSION['name'] = "未登录";
+
+    $name = $_SESSION['name'];
+    $name = "九点半";
+    $flaglogin = 1;
+
+
     $servername ="localhost";
     $username   ="root";
     $password   ="";
@@ -19,7 +28,7 @@
 
     mysql_select_db($database, $conn);
 
-    $sql = "select user_id, name, image_addr, favorite_type, book_id, title, cover_addr from `user` natural join `usercollect` natural join `book` where user_id = '1'";
+    $sql = "select user_id, name, image_addr, favorite_type, book_id, title, cover_addr from `user` natural join `usercollect` natural join `book` where user_name = '$name'";
     mysql_query("SET NAMES UTF8");
     $result = mysql_query($sql);
     $userBooks=array(); 
