@@ -11,12 +11,12 @@
     border: 1px solid #000;
 }
 
-/*2018-6-6改了一下width*/
 .head-row {
     width: 100%;
     min-width: 1000px;
     height: 60px;
-    background-color: #eee;
+    background: rgb(0, 0, 225, 0.2);
+    background-image: url("../img/bg.jpg");
 }
 
 .head-row .container {
@@ -28,6 +28,18 @@
     height: 60px;
     border-bottom: 1px solid #ccc;
 }
+
+.head-row .container .frosted-glass{
+            width: 287px;
+            height: 285px;
+            background: inherit;
+            -webkit-filter: blur(5px);
+            -moz-filter: blur(5px);
+            -ms-filter: blur(5px);
+            -o-filter: blur(5px);
+            filter: blur(5px);
+            filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false);
+        }
 
 .head-row .container .head .head-box {
     margin-top: 15px;
@@ -53,10 +65,16 @@
 
 /*用户名*/
 .head-row .container .head .head-box .head-user-name {
-    float: left;
     position: relative;
     top: -25px;
     left: 40px;
+    width: 60px;
+
+    overflow: hidden;  
+    /*文本不换行*/  
+    white-space: nowrap;  
+    /*文字超出用省略号*/  
+    text-overflow:ellipsis;
 }
 
 .head-row .container .head .head-box .head-box-style {
