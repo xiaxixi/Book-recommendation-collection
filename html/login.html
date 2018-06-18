@@ -12,8 +12,8 @@
     </head>
     <body>
         <div class="container">
-            <form class="col-sm-offset-4 col-sm-4 form-horizontal" role="form" action="../php/login.php" method="post">
-                <div class="panel panel-default" method="post">
+            <form class="col-sm-offset-4 col-sm-4 form-horizontal" id="form" action="../php/login.php" method="post">
+                <div class="panel panel-default">
                     <div class="panel-heading">
                         <p>欢迎书友</p>
                     </div>
@@ -23,7 +23,7 @@
                                 <span class="input-group-addon">
                                     <span class="fa fa-user"></span>
                                 </span>
-                                <input type="text" class="form-control" id="username" name="name" placeholder="请输入用户名" required>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="请输入用户名" required nullmsg="用户名不能为空">
                             </div>
                         </div>
                         <div class="form-group">
@@ -31,22 +31,26 @@
                                 <span class="input-group-addon">
                                     <span class="fa fa-lock"></span>
                                 </span>
-                                <input type="password" class="form-control" id="password" name="pwd" placeholder="请输入密码" required>
+                                <input type="password" class="form-control" id="pwd" name="pwd" placeholder="请输入密码" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block" id="login" name="submit">登录</button>
                         </div>
                         <div class="form-group">
-                            <button type="button" class="btn btn-info col-sm-2 col-sm-offset-7" onclick="window.location.href='../index.html'">游客</button>
-                            <button type="button" class="btn btn-info col-sm-2 col-sm-offset-1" onclick="window.location.href='register.html'">注册</button>
+                            <div class="checkbox">
+                                <label class="col-sm-10">
+                                    <input type="checkbox" id="remember">请记住我
+                                </label>
+                                <a class="col-sm-2" href="register.html">注册</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
         <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-        <!-- <script type="text/javascript" src="../js/login.js"></script> -->
+        <script type="text/javascript" src="../js/login.js"></script>
     </body>
 </head>
 </html>
