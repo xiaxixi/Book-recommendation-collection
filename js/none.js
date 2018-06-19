@@ -15,8 +15,6 @@ function load() {
         return;
     }
     var url = "../php/none.php";
-    // url=url+"?q="+str;
-    // url=url+"&sid="+Math.random();
     xmlHttp.onreadystatechange = stateChanged;
     xmlHttp.open("GET", url, true);
     xmlHttp.send(null);
@@ -27,10 +25,8 @@ var i = 0;
 function stateChanged() { 
     if (xmlHttp.readyState == 4 || xmlHttp.readyState == 200) {
         var jsonstr = xmlHttp.responseText;
-        console.log(jsonstr);
 
         var user = JSON.parse(jsonstr);
-        // console.log(recommend_book[0].name);
 
         document.getElementById("head-user-image").src = user[0].image_addr;
         document.getElementById("head-user-name").innerHTML = user[0].name;

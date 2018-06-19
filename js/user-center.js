@@ -26,7 +26,6 @@ var i = 0;
 function stateChanged() { 
     if (xmlHttp.readyState == 4 || xmlHttp.readyState == 200) {
         jsonstr = xmlHttp.responseText;
-        console.log(jsonstr);
 
         if(jsonstr[3] == "n") {
             var user = JSON.parse(jsonstr);
