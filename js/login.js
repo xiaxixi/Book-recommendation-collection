@@ -8,30 +8,30 @@
 // 登录记住密码
 window.onload = function() {
   var oForm = document.getElementById('form');
-  var oUser = document.getElementById('username');
-  var oPswd = document.getElementById('password');
+  var oUser = document.getElementById('name');
+  var oPswd = document.getElementById('pwd');
   var oRemember = document.getElementById('remember');
 
   // 页面初始化时，如果帐号密码cookie存在则填充
-  if (getCookie('username') && getCookie('password')) {
-    oUser.value = getCookie('username');
-    oPswd.value = getCookie('password');
+  if (getCookie('name') && getCookie('pwd')) {
+    oUser.value = getCookie('name');
+    oPswd.value = getCookie('pwd');
     oRemember.checked = true;
   }
 
   // 复选框勾选状态发生改变时，如果未勾选则清除cookie
   oRemember.onchange = function() {
     if (!this.checked) {
-      delCookie('username');
-      delCookie('password');
+      delCookie('name');
+      delCookie('pwd');
     }
   };
 
   // 表单提交事件触发时，如果复选框是勾选状态则保存cookie
   oForm.onsubmit = function() {
     if (remember.checked) {
-      setCookie('username', oUser.value, 7); // 保存帐号到cookie，有效期7天
-      setCookie('password', oPswd.value, 7); // 保存密码到cookie，有效期7天
+      setCookie('name', oUser.value, 7); // 保存帐号到cookie，有效期7天
+      setCookie('pwd', oPswd.value, 7); // 保存密码到cookie，有效期7天
     }
   };
 };
