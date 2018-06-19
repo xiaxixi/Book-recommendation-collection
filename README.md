@@ -15,22 +15,22 @@
 ### 界面设计
 
 1. 登陆界面</br>
-![](http:106.15.186.59/images/1.jpg)
+![](http://106.15.186.59/images/1.jpg)
 
 2. 注册界面</br>
-![](http:106.15.186.59/images/2.jpg)
+![](http://106.15.186.59/images/2.jpg)
 
 3. 推荐界面</br>
-![](http:106.15.186.59/images/3.png)
+![](http://106.15.186.59/images/3.png)
 
 4. 搜索界面</br>
-![](http:106.15.186.59/images/4.png)
+![](http://106.15.186.59/images/4.png)
 
 5. 个人收藏界面</br>
-![](http:106.15.186.59/images/5.jpg)
+![](http://106.15.186.59/images/5.jpg)
 
 6. 个人中心</br>
-![](http:106.15.186.59/images/6.png)
+![](http://106.15.186.59/images/6.png)
 
 
 ### 数据结构
