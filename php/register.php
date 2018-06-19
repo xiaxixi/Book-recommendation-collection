@@ -8,10 +8,10 @@
 
     header("Content-type: text/html; charset=utf-8"); 
 
-    $servername ="127.0.0.1";
-    $username   ="root";
-    $password   ="";
-    $database   ="brc";
+    $servername = "127.0.0.1";
+    $username   = "root";
+    $password   = "";
+    $database   = "brc";
 
     if (isset($_POST['submit'])){
         $name = $_POST["name"];  
