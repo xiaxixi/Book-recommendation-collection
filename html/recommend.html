@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="referrer" content="never">
     <title>推荐</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -14,14 +15,15 @@
 
 <body onload="load();">
     <!-- 头 -->
+    <div class="head-bg"></div>
     <div class="head-row">
         <div class="container">
-            <div class="head row frosted-glass">
+            <div class="head row">
                 <div class="head-box col-md-2 col-xs-2 col-lg-2">
                     <a class="head-box-style" href="recommend.html">推荐</a>
                 </div>
                 <div class="head-box col-md-2 col-xs-2 col-lg-2">
-                    <a class="head-box-style" href="search.html">搜索</a>
+                    <a class="head-box-style" href="search.php">搜索</a>
                 </div>
                 <div class="head-box col-md-2 col-xs-2 col-lg-2">
                     <a class="head-box-style" href="user-collect.php" id="head-collect">收藏夹</a>
@@ -60,10 +62,10 @@
 
                 <div class="col-md-5 col-xs-5 col-lg-5"></div>
                 <div class="main-collect-button col-md-2 col-xs-2 col-lg-2">
-                    <button id="collect-buttom" id="collect-buttom">+收藏</button>
+                    <button onclick="isCollect();" id="collect-buttom">+收藏</button>
                 </div>
                 <div class="main-change-button col-md-2 col-xs-2 col-lg-2">
-                    <button onclick="change();">换一换</button>
+                    <button onclick="change();" id="change-button">换一换</button>
                 </div>
                 <div class="col-md-3 col-xs-3 col-lg-3"></div>
 
@@ -74,7 +76,6 @@
                 <div class="col-md-1 col-xs-1 col-lg-1"></div>
         </div>
     </div>
-
 </body>
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
 <!-- <script type="text/javascript" src="js/head-user.js"></script> -->
