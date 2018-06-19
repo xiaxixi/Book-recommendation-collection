@@ -7,10 +7,10 @@
  */
 
     header("Content-type: text/html; charset=utf-8"); 
-
+    session_start();
     $servername = "127.0.0.1";
     $username   = "root";
-    $password   = "";
+    $password   = "okfCRv0q";
     $database   = "brc";
 
     if (isset($_POST['submit'])){
@@ -26,10 +26,10 @@
         }
 
         mysqli_query($conn,"SET NAMES UTF8");  // 设定字符集
-        $sql = "select name from `user` where name = '$_POST[name]'";
+        $sql = "select name from `user` where name = '{$_POST['name']}'";
         $result = mysqli_query($sql);
         $num = mysqli_num_rows($result); // 统计执行结果影响的条数
-
+        $image_addr = 'http://106.14.151.175/user-image/default.jpg';
         // 验证填写信息是否合乎规范
         if($name == "" || $pwd == "" || $pwd_confirm == "" || $select == "") {  
             echo "<script>alert('信息不能为空，请重新填写');history.go(-1);</script>";  
@@ -47,7 +47,7 @@
             echo "<script>alert('两次输入的密码不一致,请重新填写');history.go(-1);</script>";
         }
         else {  // 注册成功，返回登录页面
-            $query = "insert into user (name,pwd,favourite_type) values('{$_POST['name']}','{$_POST['pwd']}','{$_POST['select']}')";
+            $query = "insert into user (name,pwd,image_addr,favourite_type) values('{$_POST['name']}','{$_POST['pwd']}','$image_addr','{$_POST['select']}')";
             $result=mysqli_query($conn, $query);
             header("Location:../index.html");
         } 
