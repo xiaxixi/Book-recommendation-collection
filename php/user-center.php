@@ -6,18 +6,29 @@
  * @version $Id$
  */
 
-    // $name = "未登录";
-    // session_start(); 
-    // $_SESSION['name'] = "未登录";
+    function variable_to_string($variable) {
+        return is_float($variable)
+            ?
+            (string)$variable
+            :
+            (
+                is_resource($variable)
+                ?
+                "'resource of type'"
+                :
+                var_export($variable, true)
+            );
+    }
 
-    // $name = $_SESSION['name'];
-    $name = "admin";
-    $flaglogin = 1;
+
+    session_start();
+    $name = $_SESSION['name'];
+    $namestr = variable_to_string($name);
 
 
-    $servername ="localhost";
+    $servername ="127.0.0.1";
     $username   ="root";
-    $password   ="";
+    $password   ="okfCRv0q";
     $database   ="brc";
 
     $conn = mysqli_connect($servername, $username, $password);
@@ -29,7 +40,7 @@
 
     mysqli_select_db($conn, $database);
 
-    $sql = "select image_addr, name, favourite_type, book_id, title, cover_addr from `user` natural join `usercollect` natural join `book` where name = '$name'";
+    $sql = "select image_addr, name, favourite_type, book_id, title, cover_addr from `user` natural join `usercollect` natural join `book` where name = $namestr";
    
     $result = mysqli_query($conn, $sql);
     $userBooks=array(); 
@@ -43,7 +54,7 @@
         echo json_encode($userBooks); 
     }
     else {
-        $sql = "select name, image_addr, favourite_type from `user` where name = '$name'";
+        $sql = "select name, image_addr, favourite_type from `user` where name = $namestr";
         $userResult = mysqli_query($conn, $sql);
 
         $user=array();

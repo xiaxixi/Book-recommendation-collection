@@ -11,9 +11,9 @@
     session_start();
     $name = $_SESSION["name"];
 
-    $servername ="localhost";
+    $servername ="127.0.0.1";
     $username   ="root";
-    $password   ="";
+    $password   ="okfCRv0q";
     $database   ="brc";
 
     $conn = mysqli_connect($servername, $username, $password);

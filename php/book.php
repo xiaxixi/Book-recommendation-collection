@@ -6,14 +6,28 @@
  * @version $Id$
  */
 
-    header("Content-type:application/json;charset=utf-8");
+    function variable_to_string($variable) {
+        return is_float($variable)
+            ?
+            (string)$variable
+            :
+            (
+                is_resource($variable)
+                ?
+                "'resource of type'"
+                :
+                var_export($variable, true)
+            );
+    }
 
-    session_start(); 
-    $name = $_SESSION["name"];
 
-    $servername ="localhost";
+    session_start();
+    $name = $_SESSION['name'];
+    $namestr = variable_to_string($name);
+
+    $servername ="127.0.0.1";
     $username   ="root";
-    $password   ="";
+    $password   ="okfCRv0q";
     $database   ="brc";
 
     $conn = mysqli_connect($servername, $username, $password);
@@ -25,14 +39,15 @@
 
     mysqli_select_db($conn, $database);
     
-    $sql = "select distinct `book`.*, name, image_addr, Alt from `book`, `user`
+    $sql = "select distinct `book`.*, name, image_addr from `book`, `user`
         where
         `book`.book_id not in
-            (select `usercollect`.book_id from `usercollect` where `usercollect`.name = '$name')
+            (select `usercollect`.book_id from `usercollect` where `usercollect`.name = $namestr)
         and type = 
-            (select favourite_type from `user` where name = '$name')";
-
+            (select favourite_type from `user` where name = $namestr)
+        and name = $namestr";
     
+    // 用户未收藏书籍
     $result = mysqli_query($conn, $sql);
     $books=array(); 
     $i=0;
