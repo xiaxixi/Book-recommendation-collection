@@ -8,15 +8,16 @@
 
     header("Content-type: text/html; charset=utf-8"); 
 
-    $servername = "127.0.0.1";
-    $username   = "root";
-    $password   = "";
-    $database   = "brc";
+    $servername ="127.0.0.1";
+    $username   ="root";
+    $password   ="";
+    $database   ="brc";
 
     if (isset($_POST['submit'])){
-        $user = $_POST["name"];  
+        $name = $_POST["name"];  
         $pwd = $_POST["pwd"];  
-        $pwd_confirm = $_POST["repwd"]; 
+        $pwd_confirm = $_POST["repwd"];
+        $select = $_POST["select"];
 
         $conn = mysqli_connect($servername, $username, $password,$database);   // 连接数据库
 
@@ -24,19 +25,19 @@
             die('Could not connect: ' . mysqli_connect_error());
         }
 
-        mysqli_query("SET NAMES UTF8");  // 设定字符集
+        mysqli_query($conn,"SET NAMES UTF8");  // 设定字符集
         $sql = "select name from `user` where name = '$_POST[name]'";
         $result = mysqli_query($sql);
-        $num = mysqli_num_rows($result); //统计执行结果影响的条数
+        $num = mysqli_num_rows($result); // 统计执行结果影响的条数
 
         // 验证填写信息是否合乎规范
-        if($user == "" || $pwd == "" || $pwd_confirm == "") {  
+        if($name == "" || $pwd == "" || $pwd_confirm == "" || $select == "") {  
             echo "<script>alert('信息不能为空，请重新填写');history.go(-1);</script>";  
         }
-        else if ((3 > strlen($user)) || (16 < strlen($user)) || (!preg_match('/^\w+$/i', $user))) {  
+        else if ((3 > strlen($name)) || (16 < strlen($name))) {  
             echo "<script>alert('用户名3-16位,请重新填写');history.go(-1);</script>";
         }
-        else if (1 == $num){
+        else if (0 < $num){
             echo "<script>alert('此用户名已经注册,请重新填写');history.go(-1);</script>"; 
         }
         else if ((6 > strlen($pwd)) || (18 < strlen($pwd))) {  
@@ -46,10 +47,12 @@
             echo "<script>alert('两次输入的密码不一致,请重新填写');history.go(-1);</script>";
         }
         else {  // 注册成功，返回登录页面
-            $query = "insert into user (name,pwd) values('{$_POST['name']}','{$_POST['pwd']}')";
-            $result = mysqli_query($conn, $query);
-            header("Location:../html/login.html");
+            $query = "insert into user (name,pwd,favourite_type) values('{$_POST['name']}','{$_POST['pwd']}','{$_POST['select']}')";
+            $result=mysqli_query($conn, $query);
+            header("Location:../index.html");
         } 
+        // 释放结果
+        mysqli_free_result($result);
     }
 
     mysqli_close($conn);
