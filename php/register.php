@@ -30,6 +30,7 @@
         $result = mysqli_query($sql);
         $num = mysqli_num_rows($result); // 统计执行结果影响的条数
         $image_addr = 'http://106.14.151.175/user-image/default.jpg';
+        
         // 验证填写信息是否合乎规范
         if($name == "" || $pwd == "" || $pwd_confirm == "" || $select == "") {  
             echo "<script>alert('信息不能为空，请重新填写');history.go(-1);</script>";  
