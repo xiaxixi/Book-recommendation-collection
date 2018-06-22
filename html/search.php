@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="../css/search.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/head.css">
-    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
 
 </head>
 
@@ -54,6 +53,7 @@
         </ul>
     </div>
 </body>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="../js/search.js"></script>
 
 </html>
