@@ -6,7 +6,9 @@
  * @date    2018-06-06 09:21:21
  * @version $Id$
  */
-    
+
+    /* 连接后端user数据表，根据输入验证信息并登录 */
+
     header("Content-type: text/html; charset=utf-8"); 
 
     session_start();    //  登录系统开启一个session内容 
