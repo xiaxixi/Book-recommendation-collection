@@ -67,25 +67,25 @@ function fn(data) {
       Author[i] = "无";
     }
     content += "<li>\
-                  <div class='search-infor col-md-3 col-xs-3'>\
-                    <img src='" + Img[i] + "'/>\
-                  </div>\
-                  <div class='search-infor col-md-5 col-xs-5'>\
-                    <p>书名：" + Title[i] + "</p>\
-                    <p>作者：" + Author[i] + "</p>\
-                    <p>豆瓣评分：" + Rating[i] + "</p>\
-                    <p>出版社：" + data.books[i].publisher + "</p>\
-                  </div>\
-                  <div class='collect-button col-md-4 col-xs-4' id='btn'>\
-                    <a target='view_frame' href=" + data.books[i].alt + ">Learon more</a>\
-                    <input type='submit' name='collect' id='collect-btn' value='+收藏'>\
-                  </div>\
-                  <div class='search-brief col-md-11 col-xs-11'>\
-                    <p>简介：</p>\
-                  </div>\
-                  <div class='search-intro col-md-11 col-xs-11'>\
-                    " + Summary[i] + "\
-                  </div>\
+                    <div class='search-infor col-md-3 col-xs-3'>\
+                        <img src='" + Img[i] + "'/>\
+                    </div>\
+                    <div class='search-infor col-md-5 col-xs-5'>\
+                        <p>书名：" + Title[i] + "</p>\
+                        <p>作者：" + Author[i] + "</p>\
+                        <p>豆瓣评分：" + Rating[i] + "</p>\
+                        <p>出版社：" + data.books[i].publisher + "</p>\
+                    </div>\
+                    <div class='collect-button col-md-4 col-xs-4' id='btn'>\
+                        <a target='view_frame' href=" + data.books[i].alt + ">Learon more</a>\
+                        <input type='submit' name='collect' id='collect-btn' value='+收藏'>\
+                    </div>\
+                    <div class='search-brief col-md-11 col-xs-11'>\
+                        <p>简介：</p>\
+                    </div>\
+                    <div class='search-intro col-md-11 col-xs-11'>\
+                        " + Summary[i] + "\
+                    </div>\
                 </li>";
   };
   oList.innerHTML = content;
