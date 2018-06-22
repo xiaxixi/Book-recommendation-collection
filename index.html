@@ -12,16 +12,17 @@
         <link rel="stylesheet" type="text/css" href="css/login.css">
         <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     </head>
+    
     <body>
         <div class="container" id="mydiv">
             <form class="col-sm-offset-4 col-sm-4 form-horizontal" id="form" action="php/login.php" method="post">
-                
+                <!-- 登录面板区 -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <p>欢迎书友</p>
                     </div>
                     <div class="panel-body">
-                        
+                        <!-- 用户名 -->
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon">
@@ -30,7 +31,7 @@
                                 <input type="text" class="form-control" id="name" name="name" placeholder="请输入用户名" required autocomplete='username'>
                             </div>
                         </div>
-                        
+                        <!-- 密码 -->
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon">
@@ -39,11 +40,11 @@
                                 <input type="password" class="form-control" id="pwd" name="pwd" placeholder="请输入密码" required autocomplete='current-password'>
                             </div>
                         </div>
-                        
+                        <!-- 登录 -->
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block" id="login" name="submit">登录</button>
                         </div>
-
+                        <!-- 注册 -->
                         <div class="form-group">
                             <a class="col-sm-offset-10 col-sm-2" href="html/register.html">注册</a>
                         </div>
@@ -52,6 +53,7 @@
             </form>
         </div>
     </body>
+
     <script type="text/javascript" src="js/style.js"></script>
     <script type="text/javascript" src="js/canvas-particle.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script> 
