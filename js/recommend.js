@@ -1,9 +1,11 @@
-﻿/**
+/**
  * 
  * @authors Zheng Liu (995170241@qq.com)
  * @date    2018-06-14 20:19:09
  * @version $Id$
  */
+
+/* 推荐界面的显示函数、换书按钮的响应函数 */
 
 var xmlHttp;
 
