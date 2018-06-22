@@ -10,7 +10,7 @@
 
 
 
-/*...头.....................................................*/
+/* 头（索引栏通用css）.....................................................*/
 
 .head-bg {
     width: 100%;
@@ -60,7 +60,7 @@
 
 /*头像*/
 
-.head-row .container .head .head-box>img {
+.head-row .container .head .head-box > img {
     display: block;
     width: 35px;
     height: 35px;
