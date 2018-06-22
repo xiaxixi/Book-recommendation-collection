@@ -12,13 +12,13 @@
     <body>
         <div class="container" id="mydiv">
             <form class="col-sm-offset-4 col-sm-4 form-horizontal" id="form" action="../php/register.php" method="post">
+                <!-- 注册面板区 -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <p>注册信息</p>
                     </div>
-                    
                     <div class="panel-body">
-                        
+                        <!-- 用户名 -->
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon">
@@ -27,7 +27,7 @@
                                 <input type="text" class="form-control" id="name" name="name" placeholder="请输入用户名" required>
                             </div>
                         </div>
-                        
+                        <!-- 密码 -->
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon">
@@ -36,7 +36,7 @@
                                 <input type="password" class="form-control" id="pwd" name="pwd" placeholder="请输入密码" required>
                             </div>
                         </div>
-                        
+                        <!-- 重复密码 -->
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon">
@@ -45,7 +45,7 @@
                                 <input type="password" class="form-control" id="repwd" name="repwd" placeholder="请再次输入密码" required>
                             </div>
                         </div>
-                        
+                        <!-- 选择喜爱的类型 -->
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon">
@@ -62,22 +62,23 @@
                                 </select>
                             </div>
                         </div>
-                        
+                        <!-- 注册 -->
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block" id="register" name="submit">注册</button>
                         </div>
-                        
+                        <!-- 返回登录界面 -->
                         <div class="form-group">
                             <div class="col-sm-offset-10 col-sm-10">
                                 <a href="../index.html">登录</a>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </form>
-        </div>
-        
+        </div>       
     </body>
+    
         <script type="text/javascript" src="../js/bootstrap.min.js"></script>
         <script type="text/javascript" src="../js/style.js"></script>
         <script type="text/javascript" src="../js/canvas-particle.js"></script>
