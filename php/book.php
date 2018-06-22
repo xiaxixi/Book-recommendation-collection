@@ -6,6 +6,8 @@
  * @version $Id$
  */
 
+/* 连接后端book数据库，根据用户喜爱书籍和收藏记录筛选出推荐书籍 */
+
     function variable_to_string($variable) {
         return is_float($variable)
             ?
