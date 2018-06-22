@@ -5,6 +5,8 @@
  * @version $Id$
  */
 
+/* 个人中心界面的最近收藏推荐书籍的显示函数 */
+
 var xmlHttp;
 
 function load() { 
