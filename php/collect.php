@@ -6,6 +6,8 @@
  * @version $Id$
  */
 
+    /* 连接后端usercollect数据表，向数据表插入一条收藏记录 */
+
     header("Content-type:application/json;charset=utf-8");
 
     session_start();
@@ -33,8 +35,6 @@
             values('{$UserName}', '{$BookId}', '{$Alt}')";
 
     echo mysqli_query($conn, $sql);
-
-    // $result = mysql_query($conn, $query);
 
     mysqli_close($conn);
 ?>
