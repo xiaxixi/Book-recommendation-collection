@@ -15,7 +15,7 @@
 ### 界面设计
 
 1. 登陆界面</br>
-![](http://47.100.172.51/shared/images/login.png)
+![](http://106.14.151.175/background-image/1.jpg)
 
 
 2. 注册界面</br>
