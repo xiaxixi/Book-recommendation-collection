@@ -6,6 +6,8 @@
  * @version $Id$
  */
 
+    /* 连接后端user数据表，判断输入信息并注册新用户 */
+
     header("Content-type: text/html; charset=utf-8"); 
     session_start();
     $servername = "127.0.0.1";
