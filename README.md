@@ -15,7 +15,7 @@
 ### 界面设计
 
 1. 登陆界面</br>
-![](http://106.14.151.175/background-image/1.jpg)
+![](http://47.100.172.51/image/1.png)
 
 
 2. 注册界面</br>
@@ -114,5 +114,5 @@
 >    实现每个界面，包括所有的前端后端，相关算法和响应函数
 
 ### 项目网站
->    http://106.14.151.175/Book-recommendation-collection/index.html
+>    http://106.14.151.175/Book-recommendation-collection/index.html        
 >    PS:服务器2018.7.30过期
