@@ -5,6 +5,8 @@
  * @version $Id$
  */
 
+/* 推荐界面的收藏按钮的响应函数 */
+
 $(function() {
     $("#collect-buttom").click(function() {
         var BookId = recommend_book[i].book_id;
