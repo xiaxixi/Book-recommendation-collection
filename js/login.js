@@ -5,7 +5,8 @@
  * @version $Id$
  */
 
-// 登录记住密码
+/* 登录界面的记住密码的响应函数 */
+
 window.onload = function() {
   var oForm = document.getElementById('form');
   var oUser = document.getElementById('name');
