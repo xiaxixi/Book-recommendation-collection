@@ -5,7 +5,8 @@
  * @version $Id$
  */
 
-// var loginFlag = 0;
+/* 没有更多推荐书籍的头栏显示函数 */
+
 var xmlHttp;
 
 function load() { 
